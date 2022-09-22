@@ -13,3 +13,25 @@ insert into animals (ID,name,date_of_birth,escape_attempts,neutered,weight_kg) V
 insert into animals (ID,name,date_of_birth,escape_attempts,neutered,weight_kg) VALUES (9,'Boarmon','2005-06-07',7,true,20.4);
 insert into animals (ID,name,date_of_birth,escape_attempts,neutered,weight_kg) VALUES (10,'Boarmon','1998-10-13',3,true,17);
 insert into animals (ID,name,date_of_birth,escape_attempts,neutered,weight_kg) VALUES (11,'Ditto','2022-05-14',4,true,14);
+
+
+insert into owners(full_name, age) values ('Sam Smith', 34);
+insert into owners(full_name, age) values ('Jennifer Orwell', 19);
+insert into owners(full_name, age) values ('Bob', 45);
+insert into owners(full_name, age) values ('Melody Pond', 77);
+insert into owners(full_name, age) values ('Dean Winchester', 14);
+insert into owners(full_name, age) values ('Jodie Whittaker', 38);
+
+insert into species(name) values ('Pokemon');
+insert into species(name) values ('Digimon');
+
+update animals set species_id = 1 where name like '%mon';
+update animals set species_id = 2 where name not like '%mon';
+
+update animals set owner_id = 1 where name = 'Agumon';
+update animals set owner_id = 2 where name = 'Pikachu';
+update animals set owner_id = 3 where name = 'Plantmon' or name = 'Devimon';
+update animals set owner_id = 4 where name = 'Charmander' or name = 'Squirtle' or name = 'Blossom';
+update animals set owner_id = 5 where name = 'Angemon' or name = 'Boarmon';
+
+
