@@ -24,3 +24,28 @@ create table species (
 ID  SERIAL PRIMARY KEY,
 name varchar(100)
 );
+
+create table vets (
+ID  SERIAL PRIMARY KEY,
+name varchar(100),
+age int,
+date_of_graduation date
+);
+
+create table specializations (
+    ID SERIAL PRIMARY KEY,
+    species_id int,
+    vet_id int,
+    FOREIGN KEY (species_id) REFERENCES species(id),
+    FOREIGN KEY (vet_id) REFERENCES vets(id)
+);
+
+CREATE TABLE visits (
+    ID SERIAL PRIMARY KEY,
+    animal_id INT,
+    vet_id INT,
+    visit_date DATE,
+    FOREIGN KEY (animal_id) REFERENCES animals(id),
+    FOREIGN KEY (vet_id) REFERENCES vets(id)
+);
+
