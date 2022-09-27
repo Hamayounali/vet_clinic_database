@@ -1,11 +1,14 @@
 # Vet Clinic Database
 
+![alt text](./vet_clinic_database_diagram.png)
+
 This is a relational database to create the data structure for a vet clinic. In this project you will create a complete database with data about:
 
 - animals
 - animals' owners
 - clinic employees
 - visits
+
 
 ## Getting Started
 
